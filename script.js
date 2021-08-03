@@ -7,15 +7,20 @@ for (let i = 1; i <= 3; i++) {
     sectionTower.appendChild(tower)
     tower.appendChild(vareta)
     if (i === 1) {
-        geraDisco(tower)
+        geraDisco(vareta)
     }
 }
 
-function geraDisco(tower) {
-    for (let i = 1; i <= 5; i++) {
+function geraDisco(vareta) {
+    let tamanho = 40
+    let discos = [];
+    for (let i = 1; i <= 4; i++) {
         let disc = document.createElement('div')
         disc.className = 'disc' + `${i}`
         disc.id = 'disc'
-        tower.appendChild(disc)
+        disc.style.width = `${tamanho}` + 'px'
+        discos.push({ disc: tamanho })
+        vareta.appendChild(disc)
+        tamanho += 20;
     }
 }
