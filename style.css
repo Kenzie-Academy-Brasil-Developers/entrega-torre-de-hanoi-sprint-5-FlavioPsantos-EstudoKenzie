@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+main {
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#torres {
+    margin-top: 10%;
+    background-color: cadetblue;
+    width: 80%;
+    height: 30vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.torre1,
+.torre2,
+.torre3 {
+    height: 15vh;
+    width: 30%;
+    background-color: white;
+}
+
+.vareta1,
+.vareta2,
+.vareta3 {
+    height: 10vh;
+    width: 7%;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 35%;
+}
