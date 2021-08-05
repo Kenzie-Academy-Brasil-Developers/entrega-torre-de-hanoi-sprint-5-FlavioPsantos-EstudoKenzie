@@ -3,6 +3,7 @@ const sectionTower = document.getElementById('torres')
 const torreInicial = document.getElementById('torre1')
 let takeDisc = undefined;
 let countClick = 0;
+let actualClick;
 
 let tamanho = 100
 for (let i = 1; i <= 4; i++) {
@@ -22,7 +23,8 @@ sectionTower.addEventListener('click', function(e) {
 })
 for (let i = 0; i < torre.length; i++) {
     torre[i].addEventListener('click', function(e) {
-        let actualTower = e.target
+        const actualTower = e.target
+        actualClick = actualTower
         console.log(actualTower)
         if (e.target.lastElementChild !== null) {
             countClick = 1
@@ -30,15 +32,18 @@ for (let i = 0; i < torre.length; i++) {
         if (countClick === 0) {
             alert('Torre vazia, clique em outra')
         } else {
-            if (e.target.lastElementChild === null || ) {
-
+            if (countClick === 1) {
+                actualTower = e.target
+                actualClick.appendChild(takeDisc)
             }
         }
-    })
 
-    //criar variavel para armazenar disco
-    //primeiro click não pode ser em uma torre vazia 
-    //armazenar a torre clicada
-    //verificar qual é a proxima 
-    //se clicar em uma torre que não possui disco retornar jogada inválida 
-    //
+    })
+}
+
+//criar variavel para armazenar disco
+//primeiro click não pode ser em uma torre vazia 
+//armazenar a torre clicada
+//verificar qual é a proxima 
+//se clicar em uma torre que não possui disco retornar jogada inválida 
+//
