@@ -3,6 +3,7 @@ const sectionTower = document.getElementById('torres')
 const torreInicial = document.getElementById('torre1')
 let takeDisc = undefined;
 let countClick = 0;
+let actualClick;
 
 let tamanho = 100
 for (let i = 1; i <= 4; i++) {
@@ -22,37 +23,21 @@ sectionTower.addEventListener('click', function(e) {
 })
 for (let i = 0; i < torre.length; i++) {
     torre[i].addEventListener('click', function(e) {
-        let actualTower = e.target
-        console.log(actualTower)
-        if (e.target.lastElementChild !== null) {
+        const actualTower = e.target.lastElementChild
+        actualClick = actualTower
+        if (actualClick !== null) {
             countClick = 1
         }
         if (countClick === 0) {
             alert('Torre vazia, clique em outra')
-        } 
-        else {
-            if (e.target.lastElementChild === null) {
-            
+        } else {
+            if (countClick === 1) {
+                sectionTower.appendChild(actualClick)
             }
         }
+
     })
 }
-// sectionTower.addEventListener('click', function(evet) {
-//     if (evet.target.className === 'torre1') {
-
-//     }
-// })
-// sectionTower.addEventListener('click', function(evet) {
-//     if (evet.target.className === 'torre2') {
-       
-//     }
-// })
-// sectionTower.addEventListener('click', function(evet) {
-//     if (evet.target.className === 'torre3') {
-
-//     }
-// })
-
 function victory(){
     if(torreResult === disc1,disc2,disc3,disc4){
         let vict = document.createElement('div')
