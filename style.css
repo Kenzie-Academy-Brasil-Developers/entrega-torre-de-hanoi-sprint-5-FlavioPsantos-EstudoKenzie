@@ -21,6 +21,23 @@ main {
     align-items: flex-end;
 }
 
+.torre {
+    width: 33%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.torre::before {
+    content: '';
+    height: 100px;
+    width: 10px;
+    background-color: rebeccapurple;
+    position: absolute;
+}
+
 .torre1,
 .torre2,
 .torre3 {
@@ -43,12 +60,13 @@ main {
 }
 
 #disc {
+    justify-content: center;
     align-items: center;
     align-self: center;
     border-radius: 10px;
-    flex: 1;
     flex-basis: 1;
     border: 1px solid black;
+    z-index: 1;
     /* position: absolute; */
 }
 
