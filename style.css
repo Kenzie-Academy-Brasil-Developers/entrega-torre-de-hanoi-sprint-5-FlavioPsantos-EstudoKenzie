@@ -7,7 +7,7 @@
 
 main {
     margin: 0 auto;
-    max-width: 1100px;
+    
 }
 
 #torres {
@@ -84,4 +84,10 @@ main {
 
 .disc4 {
     background-color: #8bc34a;
+}
+
+@media screen and (min-width: 800px) {
+    main{
+        max-width: 1100px;
+    }
 }
